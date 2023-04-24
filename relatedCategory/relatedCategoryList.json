@@ -1,0 +1,1767 @@
+{
+	"status": 0,
+	"result": [
+		{
+			"categoryCode": 13314,
+			"name": "医药",
+			"children": [
+				{
+					"categoryCode": 13504,
+					"name": "解热镇痛",
+					"children": [
+						{
+							"categoryCode": 13506,
+							"name": "流行性感冒",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 15056,
+					"name": "在线问诊",
+					"children": [
+						{
+							"categoryCode": 17523,
+							"name": "中医科",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 30725,
+					"name": "特殊商品",
+					"children": [
+						{
+							"categoryCode": 30726,
+							"name": "特殊商品",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 21909,
+					"name": "非处方药",
+					"children": [
+						{
+							"categoryCode": 21920,
+							"name": "消化系统用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21921,
+							"name": "皮肤用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21922,
+							"name": "五官用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21924,
+							"name": "维钙营养",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21925,
+							"name": "儿科专科用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21910,
+							"name": "止痛镇痛用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21918,
+							"name": "呼吸系统用药",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21919,
+							"name": "感冒用药",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 9987,
+			"name": "手机通讯",
+			"children": [
+				{
+					"categoryCode": 6880,
+					"name": "运营商",
+					"children": [
+						{
+							"categoryCode": 1195,
+							"name": "办号卡",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 653,
+					"name": "手机",
+					"children": [
+						{
+							"categoryCode": 655,
+							"name": "手机",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 830,
+					"name": "手机配件",
+					"children": [
+						{
+							"categoryCode": 866,
+							"name": "手机壳/保护套",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 867,
+							"name": "手机贴膜",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13658,
+							"name": "移动电源",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13660,
+							"name": "直插充电器",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13661,
+							"name": "数据线",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 6728,
+			"name": "汽车用品",
+			"children": [
+				{
+					"categoryCode": 12402,
+					"name": "汽车服务",
+					"children": [
+						{
+							"categoryCode": 17225,
+							"name": "车务",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 6745,
+					"name": "汽车装饰",
+					"children": [
+						{
+							"categoryCode": 14914,
+							"name": "临时停车牌",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1672,
+			"name": "鲜花/奢侈品",
+			"children": [
+				{
+					"categoryCode": 2599,
+					"name": "平台专用类目",
+					"children": [
+						{
+							"categoryCode": 27155,
+							"name": "极速版权益包",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21491,
+							"name": "权益包",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 6980,
+							"name": "京东卡",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12427,
+							"name": "PLUS会员",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 4938,
+			"name": "本地生活/旅游出行",
+			"children": [
+				{
+					"categoryCode": 11760,
+					"name": "生活服务",
+					"children": [
+						{
+							"categoryCode": 12374,
+							"name": "家政保洁",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 4941,
+					"name": "通讯充值",
+					"children": [
+						{
+							"categoryCode": 21441,
+							"name": "京喜通讯充值",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 4833,
+							"name": "手机话费充值",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 652,
+			"name": "数码",
+			"children": [
+				{
+					"categoryCode": 828,
+					"name": "影音娱乐",
+					"children": [
+						{
+							"categoryCode": 842,
+							"name": "蓝牙/无线耳机",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 829,
+					"name": "数码配件",
+					"children": [
+						{
+							"categoryCode": 854,
+							"name": "电池/充电器",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 27983,
+			"name": "营养保健",
+			"children": [
+				{
+					"categoryCode": 27988,
+					"name": "维生素/矿物质",
+					"children": [
+						{
+							"categoryCode": 28030,
+							"name": "维生素",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 27989,
+					"name": "骨骼健康",
+					"children": [
+						{
+							"categoryCode": 28043,
+							"name": "钙",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 27991,
+					"name": "其他营养保健",
+					"children": [
+						{
+							"categoryCode": 28055,
+							"name": "益生菌",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 15248,
+			"name": "家纺",
+			"children": [
+				{
+					"categoryCode": 15250,
+					"name": "居家布艺",
+					"children": [
+						{
+							"categoryCode": 15278,
+							"name": "毛巾",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 11729,
+			"name": "鞋靴",
+			"children": [
+				{
+					"categoryCode": 11730,
+					"name": "流行男鞋",
+					"children": [
+						{
+							"categoryCode": 6911,
+							"name": "男士拖鞋",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 6994,
+			"name": "宠物生活",
+			"children": [
+				{
+					"categoryCode": 6995,
+					"name": "猫狗主粮",
+					"children": [
+						{
+							"categoryCode": 7003,
+							"name": "猫干粮",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1620,
+			"name": "家居日用",
+			"children": [
+				{
+					"categoryCode": 13780,
+					"name": "收纳用品",
+					"children": [
+						{
+							"categoryCode": 13781,
+							"name": "收纳袋/包",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21989,
+							"name": "收纳盒",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1624,
+					"name": "生活日用",
+					"children": [
+						{
+							"categoryCode": 1657,
+							"name": "浴室用品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1660,
+							"name": "洗晒/熨烫",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 11167,
+							"name": "保暖防护",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 29582,
+					"name": "婚庆节庆",
+					"children": [
+						{
+							"categoryCode": 29595,
+							"name": "其它婚庆节庆用品",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 6233,
+			"name": "玩具乐器",
+			"children": [
+				{
+					"categoryCode": 6275,
+					"name": "积木拼插",
+					"children": [
+						{
+							"categoryCode": 6280,
+							"name": "积木",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 6271,
+					"name": "早教/智能玩具",
+					"children": [
+						{
+							"categoryCode": 6277,
+							"name": "早教启智",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 27546,
+			"name": "传统滋补",
+			"children": [
+				{
+					"categoryCode": 27552,
+					"name": "养生茶饮",
+					"children": [
+						{
+							"categoryCode": 27607,
+							"name": "其它养生茶饮",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 27597,
+							"name": "枸杞",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 15901,
+			"name": "家庭清洁/纸品",
+			"children": [
+				{
+					"categoryCode": 15904,
+					"name": "衣物清洁",
+					"children": [
+						{
+							"categoryCode": 21488,
+							"name": "洗衣凝珠",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15924,
+							"name": "普通洗衣液",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 15905,
+					"name": "家庭环境清洁",
+					"children": [
+						{
+							"categoryCode": 15937,
+							"name": "其它清洁用品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15930,
+							"name": "洗洁精",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15933,
+							"name": "洁厕剂",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15935,
+							"name": "消毒液",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 15902,
+					"name": "清洁纸品",
+					"children": [
+						{
+							"categoryCode": 15908,
+							"name": "抽纸",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15909,
+							"name": "卷纸",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15911,
+							"name": "湿巾",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15912,
+							"name": "厨房纸巾",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15913,
+							"name": "湿厕纸",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 15903,
+					"name": "清洁用具",
+					"children": [
+						{
+							"categoryCode": 15920,
+							"name": "手套/鞋套/围裙",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15921,
+							"name": "清洁刷具",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 22291,
+							"name": "垃圾袋",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15915,
+							"name": "一次性清洁用品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15917,
+							"name": "拖把",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15919,
+							"name": "抹布/百洁布",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 670,
+			"name": "电脑、办公",
+			"children": [
+				{
+					"categoryCode": 21076,
+					"name": "办公耗材",
+					"children": [
+						{
+							"categoryCode": 21078,
+							"name": "纸类",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 729,
+					"name": "文具",
+					"children": [
+						{
+							"categoryCode": 4837,
+							"name": "办公文具",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 4840,
+							"name": "文件管理",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1449,
+							"name": "学生文具",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 7371,
+							"name": "本册/便签",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2603,
+							"name": "笔类",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 686,
+					"name": "外设产品",
+					"children": [
+						{
+							"categoryCode": 690,
+							"name": "鼠标",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1047,
+							"name": "插座",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1049,
+							"name": "线缆",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 737,
+			"name": "家用电器",
+			"children": [
+				{
+					"categoryCode": 752,
+					"name": "厨房小电",
+					"children": [
+						{
+							"categoryCode": 754,
+							"name": "多功能锅",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 760,
+							"name": "电热水壶",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1276,
+					"name": "个护健康",
+					"children": [
+						{
+							"categoryCode": 739,
+							"name": "剃须刀",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 740,
+							"name": "电吹风",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 967,
+							"name": "按摩器",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 12259,
+			"name": "酒类",
+			"children": [
+				{
+					"categoryCode": 15600,
+					"name": "特殊商品",
+					"children": [
+						{
+							"categoryCode": 21487,
+							"name": "酒类手提袋",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 12260,
+					"name": "白酒",
+					"children": [
+						{
+							"categoryCode": 9435,
+							"name": "白酒",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 14714,
+					"name": "葡萄酒",
+					"children": [
+						{
+							"categoryCode": 15601,
+							"name": "葡萄酒",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 14716,
+					"name": "啤酒",
+					"children": [
+						{
+							"categoryCode": 15602,
+							"name": "啤酒",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1315,
+			"name": "服饰内衣",
+			"children": [
+				{
+					"categoryCode": 1345,
+					"name": "内衣",
+					"children": [
+						{
+							"categoryCode": 9744,
+							"name": "男式内裤",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12010,
+							"name": "休闲袜",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1371,
+							"name": "睡衣/家居服",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 9743,
+							"name": "女式内裤",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1342,
+					"name": "男装",
+					"children": [
+						{
+							"categoryCode": 1349,
+							"name": "男士T恤",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1316,
+			"name": "美妆护肤",
+			"children": [
+				{
+					"categoryCode": 1381,
+					"name": "面部护肤",
+					"children": [
+						{
+							"categoryCode": 1392,
+							"name": "面膜",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1396,
+							"name": "套装/礼盒",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13546,
+							"name": "面部精华",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 27499,
+							"name": "面部护肤体验装",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1389,
+							"name": "洁面",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1390,
+							"name": "爽肤水/化妆水",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1391,
+							"name": "乳液/面霜",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 27929,
+					"name": "特殊商品",
+					"children": [
+						{
+							"categoryCode": 27930,
+							"name": "特殊商品",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1387,
+					"name": "香水彩妆",
+					"children": [
+						{
+							"categoryCode": 1425,
+							"name": "口红",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1318,
+			"name": "运动户外",
+			"children": [
+				{
+					"categoryCode": 12099,
+					"name": "运动鞋包",
+					"children": [
+						{
+							"categoryCode": 9756,
+							"name": "跑步鞋",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1319,
+			"name": "母婴",
+			"children": [
+				{
+					"categoryCode": 1523,
+					"name": "奶粉",
+					"children": [
+						{
+							"categoryCode": 7052,
+							"name": "婴幼儿奶粉",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1524,
+					"name": "营养辅食",
+					"children": [
+						{
+							"categoryCode": 12191,
+							"name": "宝宝零食",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1525,
+					"name": "尿裤",
+					"children": [
+						{
+							"categoryCode": 7057,
+							"name": "婴童纸尿裤",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1546,
+							"name": "婴童拉拉裤",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1527,
+					"name": "婴童洗护",
+					"children": [
+						{
+							"categoryCode": 1555,
+							"name": "洗发沐浴",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1556,
+							"name": "婴童护肤",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1559,
+							"name": "日常护理",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 22491,
+							"name": "婴童湿巾",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21420,
+							"name": "棉柔巾",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 9192,
+			"name": "医疗保健",
+			"children": [
+				{
+					"categoryCode": 9195,
+					"name": "药食同源",
+					"children": [
+						{
+							"categoryCode": 12185,
+							"name": "药食同源",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 9196,
+					"name": "计生情趣",
+					"children": [
+						{
+							"categoryCode": 1502,
+							"name": "避孕套",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 9197,
+					"name": "保健器械",
+					"children": [
+						{
+							"categoryCode": 30914,
+							"name": "新冠自测产品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12587,
+							"name": "心电/血氧仪",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2687,
+							"name": "家庭护理",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 12190,
+					"name": "护理护具",
+					"children": [
+						{
+							"categoryCode": 1517,
+							"name": "口罩",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1320,
+			"name": "食品饮料",
+			"children": [
+				{
+					"categoryCode": 1584,
+					"name": "粮油调味",
+					"children": [
+						{
+							"categoryCode": 13760,
+							"name": "烘焙原料",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 30704,
+							"name": "挂面/意大利面",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 30705,
+							"name": "面粉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2675,
+							"name": "米",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2676,
+							"name": "食用油",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2677,
+							"name": "调味品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2678,
+							"name": "南北干货",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 2679,
+							"name": "方便食品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13790,
+							"name": "杂粮",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1585,
+					"name": "饮料冲调",
+					"children": [
+						{
+							"categoryCode": 1601,
+							"name": "冲饮谷物",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 3986,
+							"name": "咖啡",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1602,
+							"name": "饮料",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12201,
+							"name": "成人奶粉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 9434,
+							"name": "牛奶乳品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 10975,
+							"name": "饮用水",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 12202,
+					"name": "茗茶",
+					"children": [
+						{
+							"categoryCode": 12209,
+							"name": "花草茶",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12207,
+							"name": "红茶",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 1583,
+					"name": "休闲食品",
+					"children": [
+						{
+							"categoryCode": 31648,
+							"name": "饼干/膨化",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 31651,
+							"name": "果冻/布丁",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 31588,
+							"name": "海味零食",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1590,
+							"name": "豆干/素食零食",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1591,
+							"name": "坚果炒货",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1592,
+							"name": "肉干肉脯",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 23096,
+							"name": "巧克力",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1593,
+							"name": "蜜饯果干",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1594,
+							"name": "糖果",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 1595,
+							"name": "糕点/点心",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13757,
+							"name": "熟食腊味",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 31647,
+							"name": "零食大礼包",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 16750,
+			"name": "个人护理",
+			"children": [
+				{
+					"categoryCode": 16753,
+					"name": "身体护理",
+					"children": [
+						{
+							"categoryCode": 16778,
+							"name": "润肤",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16779,
+							"name": "沐浴露",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16795,
+							"name": "其它身体护理",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16780,
+							"name": "香皂",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16782,
+							"name": "洗手液",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 16754,
+					"name": "女性护理",
+					"children": [
+						{
+							"categoryCode": 16800,
+							"name": "卫生巾",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21489,
+							"name": "裤型卫生巾",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 16755,
+					"name": "口腔护理",
+					"children": [
+						{
+							"categoryCode": 16806,
+							"name": "牙膏",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16809,
+							"name": "牙刷",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 16812,
+							"name": "漱口水",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 16751,
+					"name": "洗发护发",
+					"children": [
+						{
+							"categoryCode": 16756,
+							"name": "洗发水",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 1713,
+			"name": "图书",
+			"children": [
+				{
+					"categoryCode": 3289,
+					"name": "中小学教辅",
+					"children": [
+						{
+							"categoryCode": 3839,
+							"name": "课外读物",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 3263,
+					"name": "童书",
+					"children": [
+						{
+							"categoryCode": 3394,
+							"name": "儿童文学",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 6196,
+			"name": "厨具",
+			"children": [
+				{
+					"categoryCode": 6227,
+					"name": "餐具",
+					"children": [
+						{
+							"categoryCode": 6232,
+							"name": "一次性用品",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 6197,
+					"name": "烹饪锅具",
+					"children": [
+						{
+							"categoryCode": 6199,
+							"name": "炒锅",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 6219,
+					"name": "水具酒具",
+					"children": [
+						{
+							"categoryCode": 6221,
+							"name": "玻璃杯",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 6223,
+							"name": "保温杯",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 30750,
+					"name": "厨房小工具",
+					"children": [
+						{
+							"categoryCode": 30779,
+							"name": "其它厨房小工具",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 12218,
+			"name": "生鲜",
+			"children": [
+				{
+					"categoryCode": 13553,
+					"name": "蔬菜",
+					"children": [
+						{
+							"categoryCode": 13573,
+							"name": "叶菜类",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13574,
+							"name": "茄果瓜类",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13575,
+							"name": "根茎类",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13577,
+							"name": "葱姜蒜椒",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13578,
+							"name": "半加工蔬菜",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 13586,
+					"name": "禽肉蛋品",
+					"children": [
+						{
+							"categoryCode": 13587,
+							"name": "鸡肉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12250,
+							"name": "蛋类",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 13591,
+					"name": "面点烘焙",
+					"children": [
+						{
+							"categoryCode": 13592,
+							"name": "水饺/馄饨",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13593,
+							"name": "汤圆/元宵",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13594,
+							"name": "面点",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 13581,
+					"name": "猪牛羊肉",
+					"children": [
+						{
+							"categoryCode": 12247,
+							"name": "猪肉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13582,
+							"name": "牛肉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13583,
+							"name": "羊肉",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 12221,
+					"name": "水果",
+					"children": [
+						{
+							"categoryCode": 13568,
+							"name": "柠檬",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13569,
+							"name": "草莓",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13570,
+							"name": "桃",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13571,
+							"name": "更多水果",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13572,
+							"name": "水果礼盒",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15565,
+							"name": "榴莲",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 22350,
+							"name": "枇杷",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15568,
+							"name": "椰青",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 22354,
+							"name": "柿子",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 17304,
+							"name": "荔枝",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 17305,
+							"name": "枣",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 14053,
+							"name": "瓜",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13554,
+							"name": "苹果",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13555,
+							"name": "橙子",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13556,
+							"name": "奇异果/猕猴桃",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13557,
+							"name": "车厘子/樱桃",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13558,
+							"name": "芒果",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13559,
+							"name": "蓝莓",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13560,
+							"name": "火龙果",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13561,
+							"name": "葡萄/提子",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13562,
+							"name": "柚子",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13563,
+							"name": "香蕉",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13565,
+							"name": "梨",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 13567,
+							"name": "桔/橘",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 13598,
+					"name": "乳品冷饮",
+					"children": [
+						{
+							"categoryCode": 13604,
+							"name": "低温奶",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 15247,
+							"name": "奶酪黄油",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 12222,
+					"name": "海鲜水产",
+					"children": [
+						{
+							"categoryCode": 12241,
+							"name": "鱼类",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 12242,
+							"name": "虾类",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				},
+				{
+					"categoryCode": 21455,
+					"name": "预制菜",
+					"children": [
+						{
+							"categoryCode": 21456,
+							"name": "火锅丸料",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21457,
+							"name": "肉禽菜肴",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 21458,
+							"name": "肉制品",
+							"hasAuth": false
+						},
+						{
+							"categoryCode": 31695,
+							"name": "海鲜菜肴",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 20094,
+			"name": "生鲜-7FRESH",
+			"children": [
+				{
+					"categoryCode": 20097,
+					"name": "水果",
+					"children": [
+						{
+							"categoryCode": 20226,
+							"name": "水果季节性",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		},
+		{
+			"categoryCode": 9855,
+			"name": "家装建材",
+			"children": [
+				{
+					"categoryCode": 9857,
+					"name": "厨房卫浴",
+					"children": [
+						{
+							"categoryCode": 9918,
+							"name": "厨卫配件",
+							"hasAuth": false
+						}
+					],
+					"hasAuth": false
+				}
+			],
+			"hasAuth": false
+		}
+	]
+}
