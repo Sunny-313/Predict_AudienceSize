@@ -43,3 +43,8 @@ if __name__ == '__main__':
         li.append(build_dataframe(el))
     
     df = pd.concat(li)
+    
+    # df['cate_list'] = df.apply((f'{df["categoryCode_1"]}_{df["categoryCode_2"]}_{df["categoryCode_3"]}'),axis=1)
+    df['cate_name'] = df.apply(lambda x: str(x['name_1']) +'_'+ str(x['name_2']) +'_'+ str(x['name_3']), axis=1)
+    df['cate_id'] = df.apply(lambda x: str(x['categoryCode_1']) +'_'+ str(x['categoryCode_2']) +'_'+ str(x['categoryCode_3']), axis=1)
+    df.to_excel('output/relatedCategory.xlsx', index=None, header=True)
