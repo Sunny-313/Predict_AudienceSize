@@ -9,6 +9,8 @@ import requests
 import json
 import os
 import re
+import random
+import time
 
 
 def load_json(file):
@@ -220,6 +222,7 @@ def get_old_data(id_list,name):
         }
     return data
 
+'''搭建逻辑'''
 def get_data(df):
     for index, row in df.iterrows():
         if row["卡片名称"] == "浏览行为_品牌/类目":
@@ -236,7 +239,8 @@ def get_data(df):
             data = get_order3_data(row['sku_list'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
     return data
 
-def get_card(path): # 读取逻辑,返回人群名与data
+'''读取逻辑,返回人群名与data'''
+def get_card(path): 
     card_list = []
     df = pd.read_excel(path, dtype={'Key_ID': 'str'})
     people_list = df['人群名称'].drop_duplicates() # 提取人群名称列后去重，拿到全部人群名称
@@ -265,18 +269,22 @@ def get_card(path): # 读取逻辑,返回人群名与data
     return card_list
 
 def people_count(cookies, info):
+    
     url = 'https://4a.jd.com/datamill/api/audienceManagement/predictAudienceSize'
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
-    }
-
-    r = requests.post(url=url, cookies=cookies,headers=headers, json=info)
+        }
+    try:
+        r = requests.post(url=url, cookies=cookies,headers=headers, json=info)  
+    except Exception as e:
+        print("Error: ", e)
+        
     return r.text
 
 if __name__ == '__main__':
     cookies_file = os.path.join(os.path.dirname('__file__'), 'cookies.txt')
     cookies = parse_cookies(cookies_file)
-    # id_list = get_old_id(cookies)
+    id_list = get_old_id(cookies)
     result_list = []
     path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
     people_list = get_card(path=path)
@@ -288,5 +296,11 @@ if __name__ == '__main__':
                 "人群大小" : people_size["result"]["audienceSize"]
             }
         )
+        
+        '''设置一个延迟时长 '''
+        delay = random.randint(10000,50000)/10000
+        print('延迟时长 %f s' % delay)
+        time.sleep(delay) 
+        
     result_df = pd.DataFrame(result_list)
     # result_df.to_excel('output/output.xlsx', index=None, header=True)
