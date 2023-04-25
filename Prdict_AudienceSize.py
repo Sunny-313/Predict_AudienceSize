@@ -136,8 +136,7 @@ def get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, pr
     return data
 
 '''已有人群'''
-def get_old_data(cookies,name): # 已有人群
-    
+def get_old_id(cookies):
     headers = {
         'authority': '4a.jd.com',
         'accept': 'application/json, text/plain, */*',
@@ -174,14 +173,16 @@ def get_old_data(cookies,name): # 已有人群
             headers=headers,
         )
         
-        res_str = json.loads(response.content.decode())
+        id_list = json.loads(response.content.decode())
     
     except Exception as e:
         print("Error: ", e)
         
-    
+    return id_list
 
-    for info in res_str["result"]['data']:
+def get_old_data(id_list,name):      
+    
+    for info in id_list["result"]['data']:
         if info["name"] == name:
             audienceId = info["id"]
             
@@ -209,7 +210,8 @@ def get_data(df):
         elif row["卡片名称"] == "购买行为_关键词x三级类目":
             data = get_order2_data(row['Key_ID'], row['类目ID'],row['KeyWords'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "已有人群":
-            data = get_old_data(cookies, row['已有人群'])
+            id_list = get_old_id(cookies)
+            data = get_old_data(id_list, row['已有人群'])
     return data
 
 def get_card(path): # 读取逻辑,返回人群名与data
