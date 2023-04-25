@@ -13,19 +13,19 @@
 > 
 **目前支持的维度（持续更新中……）**
 - 浏览行为_品牌/类目
-> **`get_view_data(brand_id, cate_id, start_time, end_time, frequency, price)`**
->固定维度为品牌x三级类目、品牌、三级类目维度，根据需求在data_sheet中填写相关的数据
+> **`get_view_data(brand_id, cate_id, start_time, end_time, frequency, price)`**<br>
+> 固定维度为品牌x三级类目、品牌、三级类目维度，根据需求在data_sheet中填写相关的数据
 - 浏览行为_店铺
->**`get_view1_data(shop_id,start_time, end_time, frequency, price)`**
+>**`get_view1_data(shop_id,start_time, end_time, frequency, price)`**<br>
 >固定维度为店铺内商品维度，此时的Key_ID不是写品牌ID，而是店铺ID
 - 购买行为_品牌/类目
-> **`get_order_data(brand_id, cate_id, start_time, end_time, frequency, price)`**
+> **`get_order_data(brand_id, cate_id, start_time, end_time, frequency, price)`**<br>
 > 固定维度为品牌x三级类目、品牌、三级类目维度，根据需求在data_sheet中填写相关的数据
 - 购买行为_店铺
->**`get_order1_data(shop_id,start_time, end_time, frequency, price)`**
+>**`get_order1_data(shop_id,start_time, end_time, frequency, price)`**<br>
 >固定维度为店铺内商品维度，此时的Key_ID不是写品牌ID，而是店铺ID
 - 购买行为_关键词x三级类目
-> **`get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, price)`**
+> **`get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, price)`**<br>
 >固定维度为关键词x三级类目，此时的Key_ID不填写，需填写KeyWords（）关键词和类目
 - 购买行为_SKU
 >
