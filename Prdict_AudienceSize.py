@@ -135,8 +135,29 @@ def get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, pr
             }
     return data
 
+'''购买行为_SKU'''
+def get_order3_data(sku_list,start_time, end_time, frequency, price):
+    
+    data = {
+            "cardType": "order",
+            "cardCode": "300662",
+            "type": "behaviorV2",
+            "key": "order",
+            "screen": "all",
+            "dimension": "5",
+            "skuCode": sku_list,
+            "isRelativeTime": 'false',
+            "startDate": str(start_time).rstrip("00:00:00").rstrip(),
+            "endDate": str(end_time).rstrip("00:00:00").rstrip(),
+            "frequency": {"operator": "nolimit"} if pd.isnull(frequency) else {"operator": "between", "value": frequency},
+            "price": {"operator": "nolimit"} if pd.isnull(price) else {"operator": "dealBetween", "value": price},
+            "displayDef": "1"
+            }
+    return data
+
 '''已有人群'''
 def get_old_id(cookies):
+
     headers = {
         'authority': '4a.jd.com',
         'accept': 'application/json, text/plain, */*',
@@ -209,9 +230,10 @@ def get_data(df):
             data = get_order1_data(row['Key_ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "购买行为_关键词x三级类目":
             data = get_order2_data(row['Key_ID'], row['类目ID'],row['KeyWords'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
-        elif row["卡片名称"] == "已有人群":
-            id_list = get_old_id(cookies)
+        elif row["卡片名称"] == "已有人群":           
             data = get_old_data(id_list, row['已有人群'])
+        elif row["卡片名称"] == "购买行为_SKU":           
+            data = get_order3_data(row['sku_list'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
     return data
 
 def get_card(path): # 读取逻辑,返回人群名与data
@@ -252,11 +274,11 @@ def people_count(cookies, info):
     return r.text
 
 if __name__ == '__main__':
-    cookies_file = os.path.join(os.path.dirname('__file__'), 'zespri_cookies.txt')
+    cookies_file = os.path.join(os.path.dirname('__file__'), 'cookies.txt')
     cookies = parse_cookies(cookies_file)
-    
+    # id_list = get_old_id(cookies)
     result_list = []
-    path = os.path.join(os.getcwd(),'data_sheet.xlsx')
+    path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
     people_list = get_card(path=path)
     for people in people_list:
         people_size = eval(people_count(cookies, people["data"]))
