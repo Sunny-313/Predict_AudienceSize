@@ -223,6 +223,7 @@ def get_old_data(id_list,name):
 
         }
     return data
+
 '''获取广告ID'''
 def get_ad_id(cookies, ad_name):
     name_list = ad_name.split(",")
@@ -261,6 +262,7 @@ def get_ad_data(cookies,brand_id,cate_id, ad_name, behavior, start_time, end_tim
              }
     return data
 
+
 '''搭建逻辑'''
 def get_data(cookies,df):
     for index, row in df.iterrows():
@@ -281,6 +283,7 @@ def get_data(cookies,df):
         elif row["卡片名称"] == "广告行为":           
             data = get_ad_data(cookies,row['Key_ID'], row['类目ID'],row['渠道'],row['行为'],row['开始时间'], row['结束时间'], row['频次'])
     return data
+
 
 '''读取逻辑,返回人群名与data'''
 def get_card(path): 
@@ -349,4 +352,4 @@ if __name__ == '__main__':
         time.sleep(delay) 
         
     result_df = pd.DataFrame(result_list)
-    # result_df.to_excel('output/output.xlsx', index=None, header=True)
+    result_df.to_excel('output/output.xlsx', index=None, header=True)
