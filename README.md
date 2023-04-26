@@ -3,7 +3,7 @@
 ### 关于京东数坊人数计算API接口的调用
 
 #### Step1 ：插件下载，直接获取cookies
-> 下载下来的txt文件命名为：cookies.txt,存放在根目录
+> 导出的txt文件命名为：cookies.txt,存放在根目录
 
 ![1](pic/1.png)
 
