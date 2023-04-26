@@ -97,7 +97,7 @@ def get_order_data(brand_id, cate_id, start_time, end_time, frequency, price):
     return data
 
 '''购买行为_店铺'''
-def get_order1_data(shop_id,start_time, end_time, frequency, price):
+def get_order_shop_data(shop_id,start_time, end_time, frequency, price):
 
     data = {
             "cardType": "order",
@@ -117,7 +117,7 @@ def get_order1_data(shop_id,start_time, end_time, frequency, price):
     return data
 
 '''购买行为_关键词x三级类目'''
-def get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, price):
+def get_order_keycate_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, price):
 
     data = {
             "cardType": "order",
@@ -138,7 +138,7 @@ def get_order2_data(shop_id,cate_id,keyWords,start_time, end_time, frequency, pr
     return data
 
 '''购买行为_SKU'''
-def get_order3_data(sku_list,start_time, end_time, frequency, price):
+def get_order_sku_data(sku_list,start_time, end_time, frequency, price):
     
     data = {
             "cardType": "order",
@@ -157,7 +157,7 @@ def get_order3_data(sku_list,start_time, end_time, frequency, price):
             }
     return data
 
-'''已有人群'''
+'''获取最新已有人群ID'''
 def get_old_id(cookies):
 
     headers = {
@@ -203,7 +203,9 @@ def get_old_id(cookies):
         
     return id_list
 
+'''已有人群'''
 def get_old_data(id_list,name):      
+
     
     for info in id_list["result"]['data']:
         if info["name"] == name:
@@ -221,22 +223,61 @@ def get_old_data(id_list,name):
 
         }
     return data
+'''获取广告ID'''
+def get_ad_id(cookies, ad_name): # 拿广告id
+    name_list = ad_name.split(",")
+    ad_id = ''
+    url = 'https://4a.jd.com/datamill/api/audienceManagement/newCustomAudienceEditInner/lineList'
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36',
+    }
+    txt = requests.get(url=url,cookies=cookies,headers=headers).text
+    data_list = json.loads(txt)["result"]["data"]
+    for data in data_list:
+        if data["name"] in name_list:
+            ad_id += str(data["id"])
+            ad_id += ','
+    return ad_id.rstrip(",")
+
+'''广告行为'''
+def get_ad_data(cookies,brand_id,cate_id, ad_name, behavior, start_time, end_time, frequency):
+    ad_id = get_ad_id(cookies, ad_name)
+    data = {
+            "cardType": "advertisement",
+            "cardTitle": "广告行为",
+            "cardCode": "300270",
+            "key": "impression" if behavior == '曝光' else "click",
+            "type": "behaviorV2",
+            "line": str(ad_id),
+            "behaviorType": "impression" if behavior == '曝光' else "click",
+            "isRelativeTime": 'false',
+            "frequency": {"operator": "nolimit"} if pd.isnull(frequency) else {"operator": "between", "value": frequency},
+            "dimension": "1" if pd.isnull(cate_id) else "2",
+            "startDate": str(start_time).rstrip("00:00:00").rstrip(),
+            "endDate": str(end_time).rstrip("00:00:00").rstrip(),
+            "brandCode": brand_id,
+            "cateList": "" if pd.isnull(cate_id) else str(cate_id.split("_")[-1]),
+            "displayDef": "1"
+             }
+    return data
 
 '''搭建逻辑'''
-def get_data(df):
+def get_data(cookies,df):
     for index, row in df.iterrows():
         if row["卡片名称"] == "浏览行为_品牌/类目":
             data = get_view_data(row['Key_ID'], row['类目ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])    
         elif row["卡片名称"] == "购买行为_品牌/类目":
             data = get_order_data(row['Key_ID'], row['类目ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "购买行为_店铺":
-            data = get_order1_data(row['Key_ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
+            data = get_order_shop_data(row['Key_ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "购买行为_关键词x三级类目":
-            data = get_order2_data(row['Key_ID'], row['类目ID'],row['KeyWords'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
+            data = get_order_keycate_data(row['Key_ID'], row['类目ID'],row['KeyWords'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
+        elif row["卡片名称"] == "购买行为_SKU":           
+            data = get_order_sku_data(row['sku_list'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "已有人群":           
             data = get_old_data(id_list, row['已有人群'])
-        elif row["卡片名称"] == "购买行为_SKU":           
-            data = get_order3_data(row['sku_list'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
+        elif row["卡片名称"] == "广告行为":           
+            data = get_ad_data(cookies,row['Key_ID'], row['类目ID'],row['渠道'],row['行为'],row['开始时间'], row['结束时间'], row['频次'])
     return data
 
 '''读取逻辑,返回人群名与data'''
@@ -248,9 +289,9 @@ def get_card(path):
         df1 = df[df["人群名称"].str.contains(people)]
         df1 = df1.reset_index(drop=True)
         if len(df1) == 1: # 如果人群只有一个卡片
-            data = eval('{"audienceDefinition":{"type":"intersection","children":[' + str(get_data(df1)) + ']}}')
+            data = eval('{"audienceDefinition":{"type":"intersection","children":[' + str(get_data(cookies,df1)) + ']}}')
         else: # 多个卡片
-            data2 = str(get_data(df1.loc[[0]]))
+            data2 = str(get_data(cookies,df1.loc[[0]]))
             for i in range(len(df1)-1):
                 if df1.iloc[i+1, 1] == "交集":
                     operation = "intersection"
@@ -258,7 +299,7 @@ def get_card(path):
                     operation = "diff"
                 elif df1.iloc[i+1, 1] == "并集":
                     operation = "union"
-                data2 = '{"type":"' + operation + '","children":[' + data2 + ',' + str(get_data(df1.loc[[i+1]])) + ']}'
+                data2 = '{"type":"' + operation + '","children":[' + data2 + ',' + str(get_data(cookies,df1.loc[[i+1]])) + ']}'
             data_fall = '{"audienceDefinition":' + data2 + '}'
             data = eval(data_fall)
         card_data = {
@@ -284,7 +325,10 @@ def people_count(cookies, info):
 if __name__ == '__main__':
     cookies_file = os.path.join(os.path.dirname('__file__'), 'cookies.txt')
     cookies = parse_cookies(cookies_file)
+    
+    # 获取最新已有人群ID
     id_list = get_old_id(cookies)
+
     result_list = []
     path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
     people_list = get_card(path=path)
