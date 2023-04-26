@@ -49,7 +49,7 @@
 
 > **`def get_ad_data(cookies,brand_id,cate_id, ad_name, behavior, start_time, end_time, frequency)`**
 > 
-> ![4](4.png)
+> ![4](pic/4.png)
 > 广告行为目前只支持品牌维度、品牌x三级类目，三级类目维度使用场景较少，没写。
 > `渠道`对应用广告行为中的产品线,行为对应广告行为中的`行为类型`
 
