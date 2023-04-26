@@ -9,7 +9,8 @@
 
 > 为了减少F12查找类目Id的繁琐步骤，可以在加载界面查找relatedCategoryList的json文件，这里包含账号拥有全部类目的信息，
 >在sub_code中有解析此文件格式的json代码，获得类目名称和类目ID，类似下图：
-![1](pic/5.png)
+
+>![1](pic/5.png) <br>
 >可以将此表与date_sheet.xlsx的类目ID结合，每次只需要填写类目名称，通过vlookup直接匹配过来
 
 
