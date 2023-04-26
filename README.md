@@ -46,7 +46,7 @@
 > 已有人群除必填信息外，其他信息信息无需填写，只需要讲已有人群包的人群包名称填写到`已有人群`列
 > 这里需要注意，人群包名称必须和之前创建的人群包名称一致，不可省略。
 > id_list是根据cookies抓取的现有账号最新的100条已有人群的ID和人群名称，与填入表格的人群名称进行匹配
-
+- 广告行为
 > **`def get_ad_data(cookies,brand_id,cate_id, ad_name, behavior, start_time, end_time, frequency)`**
 > 
 > ![4](pic/4.png)
