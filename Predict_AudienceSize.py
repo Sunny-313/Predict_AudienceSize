@@ -55,7 +55,7 @@ def get_view_data(brand_id, cate_id, start_time, end_time, frequency, price):
     return data
 
 '''浏览行为_店铺'''
-def get_view1_data(shop_id,start_time, end_time, frequency, price):
+def get_view_shop_data(shop_id,start_time, end_time, frequency, price):
 
     data = {
             "cardType": "view",
@@ -224,7 +224,7 @@ def get_old_data(id_list,name):
         }
     return data
 '''获取广告ID'''
-def get_ad_id(cookies, ad_name): # 拿广告id
+def get_ad_id(cookies, ad_name):
     name_list = ad_name.split(",")
     ad_id = ''
     url = 'https://4a.jd.com/datamill/api/audienceManagement/newCustomAudienceEditInner/lineList'
@@ -266,6 +266,8 @@ def get_data(cookies,df):
     for index, row in df.iterrows():
         if row["卡片名称"] == "浏览行为_品牌/类目":
             data = get_view_data(row['Key_ID'], row['类目ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])    
+        if row["卡片名称"] == "浏览行为_店铺":
+            data = get_view_data(row['Key_ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "购买行为_品牌/类目":
             data = get_order_data(row['Key_ID'], row['类目ID'], row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "购买行为_店铺":
