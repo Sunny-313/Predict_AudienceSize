@@ -289,13 +289,14 @@ def get_data(cookies,df):
 def get_card(path): 
     card_list = []
     df = pd.read_excel(path, dtype={'Key_ID': 'str'})
-    people_list = df['人群名称'].drop_duplicates() # 提取人群名称列后去重，拿到全部人群名称
+    people_list = df['人群名称'].drop_duplicates() 
     for people in people_list:
-        df1 = df[df["人群名称"].str.contains(people)]
+        df1 = df[df["人群名称"] == people]
         df1 = df1.reset_index(drop=True)
-        if len(df1) == 1: # 如果人群只有一个卡片
+        '''单人群标签'''
+        if len(df1) == 1: 
             data = eval('{"audienceDefinition":{"type":"intersection","children":[' + str(get_data(cookies,df1)) + ']}}')
-        else: # 多个卡片
+        else:
             data2 = str(get_data(cookies,df1.loc[[0]]))
             for i in range(len(df1)-1):
                 if df1.iloc[i+1, 1] == "交集":
@@ -332,7 +333,7 @@ if __name__ == '__main__':
     cookies = parse_cookies(cookies_file)
     
     # 获取最新已有人群ID
-    id_list = get_old_id(cookies)
+    # id_list = get_old_id(cookies)
 
     result_list = []
     path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
@@ -349,7 +350,9 @@ if __name__ == '__main__':
         '''设置一个延迟时长 '''
         delay = random.randint(10000,50000)/10000
         print('延迟时长 %f s' % delay)
+        print('人群包: {}大小为：{}'.format(people["name"],people_size["result"]["audienceSize"]))
+        print("****************************************************")
         time.sleep(delay) 
         
     result_df = pd.DataFrame(result_list)
-    result_df.to_excel('output/output.xlsx', index=None, header=True)
+    result_df.to_excel('result.xlsx', index=None, header=True)

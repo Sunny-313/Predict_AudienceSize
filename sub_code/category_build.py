@@ -35,7 +35,8 @@ def build_dataframe(node, level=1):
 
 
 if __name__ == '__main__':
-    json_path = os.path.join(os.getcwd(),'relatedCategory',"relatedCategoryList.json")
+    father_path = os.path.dirname(os.path.join(os.getcwd()))
+    json_path = os.path.join(father_path,'JDCategory',"JDCategory.json")
     data = load_json(json_path)
     
     li = []
@@ -47,4 +48,5 @@ if __name__ == '__main__':
     # df['cate_list'] = df.apply((f'{df["categoryCode_1"]}_{df["categoryCode_2"]}_{df["categoryCode_3"]}'),axis=1)
     df['cate_name'] = df.apply(lambda x: str(x['name_1']) +'_'+ str(x['name_2']) +'_'+ str(x['name_3']), axis=1)
     df['cate_id'] = df.apply(lambda x: str(x['categoryCode_1']) +'_'+ str(x['categoryCode_2']) +'_'+ str(x['categoryCode_3']), axis=1)
-    df.to_excel('output/relatedCategory.xlsx', index=None, header=True)
+    output_path = os.path.join(father_path,'output',"JDCategory.xlsx")
+    df.to_excel(output_path, index=None, header=True)
