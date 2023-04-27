@@ -336,7 +336,7 @@ if __name__ == '__main__':
     cookies = parse_cookies(cookies_file)
     
     # 获取最新已有人群ID
-    # id_list = get_old_id(cookies)
+    id_list = get_old_id(cookies)
 
     result_list = []
     path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
