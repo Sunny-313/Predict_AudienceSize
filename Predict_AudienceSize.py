@@ -11,6 +11,9 @@ import os
 import re
 import random
 import time
+import warnings
+
+warnings.filterwarnings('ignore')
 
 
 def load_json(file):
@@ -351,7 +354,7 @@ if __name__ == '__main__':
         delay = random.randint(10000,50000)/10000
         print('延迟时长 %f s' % delay)
         print('人群包: {}大小为：{}'.format(people["name"],people_size["result"]["audienceSize"]))
-        print("****************************************************")
+        print("-------------------------------------------------------")
         time.sleep(delay) 
         
     result_df = pd.DataFrame(result_list)
