@@ -66,7 +66,10 @@
 > `渠道`对应用广告行为中的产品线,行为对应广告行为中的`行为类型`
 
 
-#### Step3： 生成的表在output文件夹中的output.xlsx中
+#### Step3： 无需打开代码程序，只需要配置run.bat文件中的路径，直接运行
+![7](pic/7.png)
+
+#### Step4： 生成的表在output文件夹中的output.xlsx中
 ![3](pic/3.png)
 
 
