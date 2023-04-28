@@ -341,6 +341,7 @@ if __name__ == '__main__':
     result_list = []
     path = os.path.join(os.getcwd(),'ruleSheet','data_sheet.xlsx')
     people_list = get_card(path=path)
+    
     for people in people_list:
         people_size = eval(people_count(cookies, people["data"]))
         result_list.append(
@@ -350,13 +351,15 @@ if __name__ == '__main__':
             }
         )
         
-        '''设置一个延迟时长 '''
+        # 设置一个延迟时长
         delay = random.randint(10000,50000)/10000
         print('延迟时长 %f s' % delay)
         
         print('人群包: {}大小为：{}'.format(people["name"],people_size["result"]["audienceSize"]))
         print("-------------------------------------------------------")
         time.sleep(delay) 
-        
+     
+     
     result_df = pd.DataFrame(result_list)
     result_df.to_excel('result.xlsx', index=None, header=True)
+    print("任务完成！")
