@@ -265,6 +265,28 @@ def get_ad_data(cookies,brand_id,cate_id, ad_name, behavior, start_time, end_tim
              }
     return data
 
+def get_JD_PLUS():
+    
+    data = {
+            'cardType': 'normal',
+            'categoryPath': '用户价值>账户信息>PLUS用户>PLUS及高价值用户（可选渠道）',
+            'cardCode': '302090',
+            'cardTitle': 'PLUS及高价值用户（可选渠道）',
+            'type': 'normal_label',
+            'labelCode': '402139',
+            'labelNameEn': 'plus_formal_user_open_channel',
+            'labelNameCn': 'PLUS及高价值用户（可选渠道）',
+            'tagType': 'multiSelect',
+            'params': {
+                'plus_formal_user_open_channel': {
+                    'text': '京东',
+                    'ids': '0',
+                },
+            },
+        }
+    
+    return data
+
 
 '''搭建逻辑'''
 def get_data(cookies,df):
@@ -285,6 +307,8 @@ def get_data(cookies,df):
             data = get_old_data(id_list, row['已有人群'])
         elif row["卡片名称"] == "广告行为":           
             data = get_ad_data(cookies,row['Key_ID'], row['类目ID'],row['渠道'],row['行为'],row['开始时间'], row['结束时间'], row['频次'])
+        elif row["卡片名称"] == "京东PLUS":           
+            data = get_JD_PLUS()
     return data
 
 
