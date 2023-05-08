@@ -380,7 +380,7 @@ if __name__ == '__main__':
         print('延迟时长 %f s' % delay)
         
         print('人群包: {}大小为：{}'.format(people["name"],people_size["result"]["audienceSize"]))
-        print("-------------------------------------------------------")
+        print("--------------------------------------------------------")
         time.sleep(delay) 
      
      
