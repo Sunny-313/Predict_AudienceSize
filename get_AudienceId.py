@@ -39,35 +39,54 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
     'uuid': 'undefined',
 }
-
-params = {
-    'name': '',
-    'startDate': '2021-04-24',
-    'endDate': '2023-04-24',
-    'status': '-1',
-    'audienceType': 'all',
-    'pageNum': '0',
-    'pageSize': '100',
-}
-
-cookies_file = os.path.join(os.path.dirname('__file__'), 'zespri_cookies.txt')
-cookies = parse_cookies(cookies_file)
-
-try:
-    url = "https://4a.jd.com/datamill/api/growthStrategy/audienceManagement/audienceList"
-    response = requests.get(
-        url = url,
-        params=params,
-        cookies=cookies,
-        headers=headers,
-    )
+if __name__ == '__main__':
+    '''解析cookie'''
+    cookies_file = os.path.join(os.path.dirname('__file__'), 'cookies.txt')
+    cookies = parse_cookies(cookies_file)
     
-    res_str = json.loads(response.content.decode())
+    while True:
+        li = [pd.DataFrame()]
+        inputPage = int(input("请输入需要下载的已有人群包个数(50的倍数)："))
+        if inputPage%50 == 0:
+            pageNum = inputPage//50
+            for i in range(pageNum):
+                params = {
+                    'name': '',
+                    'startDate': '',
+                    'endDate': '',
+                    'status': '-1',
+                    'audienceType': 'all',
+                    'pageNum': str(i),
+                    'pageSize': '50',
+                }
+                
+                try:
+                    url = "https://4a.jd.com/datamill/api/growthStrategy/audienceManagement/audienceList"
+                    response = requests.get(
+                        url = url,
+                        params=params,
+                        cookies=cookies,
+                        headers=headers,
+                    )
+                    
+                    res_str = json.loads(response.content.decode())
+                    
+                    '''解析json文件'''
+                    df = pd.json_normalize(res_str['result']['data'])
+                    df = df[["name","id","audienceSize"]]
+                    li.append(df)
+                    
+                except Exception as e:
+                    print("Error: ", e)
+                      
+            pack_list = pd.concat(li, axis=0, ignore_index=True, sort=False)
+            
+            break
+        else:
+            print("输入数字有误，请重新输入！")
+            print("----------------------------------------")
+            continue
+    print('任务完成!请在output文件夹中查看~')
     
-except Exception as e:
-    print("Error: ", e)
-
-df = pd.json_normalize(res_str['result']['data'])
-df = df[["name","id","audienceSize"]]
-df.to_excel('output/audienceId.xlsx', index=None, header=True)
+    pack_list.to_excel('output/audienceId.xlsx', dtype={'id': 'str'},index=None, header=True)
 
