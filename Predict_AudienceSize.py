@@ -160,60 +160,20 @@ def get_order_sku_data(sku_list,start_time, end_time, frequency, price):
             }
     return data
 
-'''获取最新已有人群ID'''
-def get_old_id(cookies):
-
-    headers = {
-        'authority': '4a.jd.com',
-        'accept': 'application/json, text/plain, */*',
-        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        # 'cookie': '__jdv=224457823|direct|-|none|-|1681901189175; __jdu=1681901189175424004703; jd.dm.lang=zh_CN; logining=1; dm_profile=false; 3AB9D23F7A4B3C9B=LDBURB5Y2AYR6D53KUXJ4WSUI5CJJ2HV74URP3IT333QC2L32HQ3U36RK2EPP22GGVZ44TQ254N4Y2LIWCQAJMGGXI; wlfstk_smdl=kri9aruvrt1knrzubn86gr1pcn8m7txr; TrackID=1ua9FD9N81h2kZN45TPK7Fj8L5fjrx6l966P60a2BxZZ80O39zZrnBTDAqZLTxJLgks73LLs1_z7K4lKRpraVMqPMI4bxhtTqzhdYaD5dSDM; thor=D896B980507952992416A2E7D770B5E5BF7D3FAC48AB92B01D9E4DE82A6E4ADA33FE2022B1F6C9D389FF0A062374B45B7E9BA697E32F3678B94385AE5422BFBDE82A2B9ADBEB141B469755DEBF5762D5993AA60081786F66AD7C8F84F460AD4566E20EF2335ECAA19E78CE3FC632F6EDD5B716229DAAF909AC4D085916DD2005; pinId=h0gvEoXeuRLeecPYgj8c8A; pin=%E4%BD%B3%E6%B2%9B%E6%B3%BD%E6%99%AE; unick=%E4%BD%B3%E6%B2%9B%E6%B3%BD%E6%99%AE; ceshi3.com=203; _tp=lVgPTDCL%2FyWF%2FoLJhRna9Vmoaw2x6voQZQELfasIUTj6Fy6C1udLA4PP0Aji8T3%2F; _pst=%E4%BD%B3%E6%B2%9B%E6%B3%BD%E6%99%AE; passport_pin=5L2z5rKb5rO95pmu; pin_account=5L2z5rKb5rO95pmu; press_pin=5L2z5rKb5rO95pmu; __jda=224457823.1681901189175424004703.1681901189.1682319187.1682321492.14; __jdc=224457823; __jdb=224457823.15.1681901189175424004703|14.1682321492',
-        'referer': 'https://4a.jd.com/datamill/growthStrategy/audienceManagement.html',
-        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'sgm-context': '157150137813415140;157150137813415140',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
-        'uuid': 'undefined',
-    }
-    
-    params = {
-        'name': '',
-        'startDate': '2021-04-24',
-        'endDate': '2023-04-24',
-        'status': '-1',
-        'audienceType': 'all',
-        'pageNum': '0',
-        'pageSize': '100',
-    }
-    
-    try:
-        url = "https://4a.jd.com/datamill/api/growthStrategy/audienceManagement/audienceList"
-        response = requests.get(
-            url = url,
-            params=params,
-            cookies=cookies,
-            headers=headers,
-        )
-        
-        id_list = json.loads(response.content.decode())
-    
-    except Exception as e:
-        print("Error: ", e)
-        
-    return id_list
 
 '''已有人群'''
-def get_old_data(id_list,name):      
+def get_old_data(in_name):      
 
+    audienceId_rpath = os.path.join(os.path.dirname('__file__'), 'output','audienceId.xlsx')
+    audienceId_path = os.path.join(os.getcwd(), audienceId_rpath)
+    audienceId_list = pd.read_excel(audienceId_path, dtype={'id': 'str'})
     
-    for info in id_list["result"]['data']:
-        if info["name"] == name:
-            audienceId = info["id"]
-            
+
+    for name, id in zip(audienceId_list['name'], audienceId_list['id']):
+        if name == in_name:
+            audienceId = id
+
+
     data = {
         
             "cardType": "custom",
@@ -304,7 +264,7 @@ def get_data(cookies,df):
         elif row["卡片名称"] == "购买行为_SKU":           
             data = get_order_sku_data(row['sku_list'],row['开始时间'], row['结束时间'], row['频次'], row['价格'])
         elif row["卡片名称"] == "已有人群":           
-            data = get_old_data(id_list, row['已有人群'])
+            data = get_old_data(row['已有人群'])
         elif row["卡片名称"] == "广告行为":           
             data = get_ad_data(cookies,row['Key_ID'], row['类目ID'],row['渠道'],row['行为'],row['开始时间'], row['结束时间'], row['频次'])
         elif row["卡片名称"] == "京东PLUS":           
