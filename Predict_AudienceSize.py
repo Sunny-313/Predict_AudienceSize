@@ -162,7 +162,7 @@ def get_order_sku_data(sku_list,start_time, end_time, frequency, price):
 
 
 '''已有人群'''
-def get_old_data(in_name):      
+def get_old_data(pack_name):      
 
     audienceId_rpath = os.path.join(os.path.dirname('__file__'), 'output','audienceId.xlsx')
     audienceId_path = os.path.join(os.getcwd(), audienceId_rpath)
@@ -170,7 +170,7 @@ def get_old_data(in_name):
     
 
     for name, id in zip(audienceId_list['name'], audienceId_list['id']):
-        if name == in_name:
+        if name == pack_name:
             audienceId = id
 
 
