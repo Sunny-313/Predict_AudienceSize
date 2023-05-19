@@ -88,5 +88,5 @@ if __name__ == '__main__':
             continue
     print('任务完成!请在output文件夹中查看~')
     
-    pack_list.to_excel('output/audienceId.xlsx', dtype={'id': 'str'},index=None, header=True)
+    pack_list.to_excel('output/audienceId.xlsx',index=None, header=True)
 
